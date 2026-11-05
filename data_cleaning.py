@@ -1,5 +1,6 @@
 from pathlib import Path
 import pandas as pd
+#Data cleaning script-Task #6
 
 # Project folder locations
 BASE_DIR = Path(__file__).resolve().parent
@@ -12,8 +13,7 @@ print("Original shape:", df.shape)
 
 # 2. Remove empty spacer columns and rename columns
 df = df.dropna(axis=1, how="all")
-df.columns = ["District", "Year", "Petrol_Price", "Diesel_Price",
-              "Petrol_KL", "Diesel_KL", "Total_KL"]
+df.columns = ["District", "Year", "Petrol_Price", "Diesel_Price","Petrol_KL", "Diesel_KL", "Total_KL"]
 
 # 3. Remove empty rows and total/summary rows
 df = df.dropna(how="all")
