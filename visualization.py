@@ -1,3 +1,4 @@
+#Data visualization script -Task #11
 import pandas as pd
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -59,7 +60,7 @@ plt.savefig(out / "4_Share_Pie.png", dpi=150)
 # 5. Year-on-year growth
 growth = yearly["Total_Fuel_Consumption"].pct_change() * 100
 plt.figure(figsize=(8, 5))
-plt.plot(years[1:], growth[1:], marker="o", color="crimson")
+plt.plot(years, growth, marker="o", color="crimson")
 plt.title("Year-on-Year Growth in Total Fuel Consumption")
 plt.xlabel("Year")
 plt.ylabel("Growth (%)")
